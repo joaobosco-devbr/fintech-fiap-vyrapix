@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VyraPix - Cadastro</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="bg-slate-100 min-h-screen flex items-center justify-center p-4">
+
+  <main class="bg-white shadow-lg rounded-2xl p-8 w-full max-w-4xl">
+
+    <header class="mb-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+      <div>
+        <h1 class="text-3xl font-bold text-violet-700">VyraPix</h1>
+        <p class="text-gray-500">Cadastro de nova conta</p>
+      </div>
+
+      <a href="index.html" class="text-violet-700 font-semibold hover:underline">
+        Voltar ao login
+      </a>
+    </header>
+
+    <form action="dashboard.html" method="get" class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+      <section class="md:col-span-2">
+        <h2 class="text-xl font-bold text-slate-800 mb-2">Dados pessoais</h2>
+      </section>
+
+      <div>
+        <label for="nome" class="block text-sm font-medium mb-2">Nome completo</label>
+        <input id="nome" name="nome" type="text" class="w-full border rounded-lg p-3" placeholder="Digite seu nome completo" required>
+      </div>
+
+      <div>
+        <label for="cpf" class="block text-sm font-medium mb-2">CPF</label>
+        <input
+          id="cpf"
+          name="cpf"
+          type="text"
+          inputmode="numeric"
+          maxlength="14"
+          pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+          title="Digite o CPF no formato 000.000.000-00"
+          class="w-full border rounded-lg p-3"
+          placeholder="000.000.000-00"
+          required>
+      </div>
+
+      <div>
+        <label for="email" class="block text-sm font-medium mb-2">E-mail</label>
+        <input id="email" name="email" type="email" class="w-full border rounded-lg p-3" placeholder="seuemail@email.com" required>
+      </div>
+
+      <div>
+        <label for="nascimento" class="block text-sm font-medium mb-2">Data de nascimento</label>
+        <input id="nascimento" name="nascimento" type="date" class="w-full border rounded-lg p-3" required>
+      </div>
+
+      <section class="md:col-span-2 mt-4">
+        <h2 class="text-xl font-bold text-slate-800 mb-2">Endereço</h2>
+      </section>
+
+      <div>
+        <label class="block text-sm font-medium mb-2">CEP</label>
+        <input
+          type="text"
+          id="cep"
+          name="cep"
+          inputmode="numeric"
+          maxlength="9"
+          pattern="\d{5}-\d{3}"
+          title="Digite o CEP no formato 00000-000"
+          class="w-full border rounded-lg p-3"
+          placeholder="00000-000"
+          required>
+      </div>
+
+      <div>
+        <label for="endereco" class="block text-sm font-medium mb-2">Endereço</label>
+        <input id="endereco" name="endereco" type="text" class="w-full border rounded-lg p-3" placeholder="Rua, avenida, número" required>
+      </div>
+
+      <div>
+        <label for="bairro" class="block text-sm font-medium mb-2">Bairro</label>
+        <input id="bairro" name="bairro" type="text" class="w-full border rounded-lg p-3" placeholder="Digite seu bairro" required>
+      </div>
+
+      <div>
+        <label for="cidade" class="block text-sm font-medium mb-2">Cidade</label>
+        <input id="cidade" name="cidade" type="text" class="w-full border rounded-lg p-3" placeholder="Digite sua cidade" required>
+      </div>
+
+      <div>
+        <label for="estado" class="block text-sm font-medium mb-2">Estado</label>
+
+        <select id="estado" name="estado" class="w-full border rounded-lg p-3 bg-white" required>
+          <option value="">Selecione o Estado</option>
+          <option>AC - Acre</option>
+          <option>AL - Alagoas</option>
+          <option>AP - Amapá</option>
+          <option>AM - Amazonas</option>
+          <option>BA - Bahia</option>
+          <option>CE - Ceará</option>
+          <option>DF - Distrito Federal</option>
+          <option>ES - Espírito Santo</option>
+          <option>GO - Goiás</option>
+          <option>MA - Maranhão</option>
+          <option>MT - Mato Grosso</option>
+          <option>MS - Mato Grosso do Sul</option>
+          <option>MG - Minas Gerais</option>
+          <option>PA - Pará</option>
+          <option>PB - Paraíba</option>
+          <option>PR - Paraná</option>
+          <option>PE - Pernambuco</option>
+          <option>PI - Piauí</option>
+          <option>RJ - Rio de Janeiro</option>
+          <option>RN - Rio Grande do Norte</option>
+          <option>RS - Rio Grande do Sul</option>
+          <option>RO - Rondônia</option>
+          <option>RR - Roraima</option>
+          <option>SC - Santa Catarina</option>
+          <option>SP - São Paulo</option>
+          <option>SE - Sergipe</option>
+          <option>TO - Tocantins</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="senha" class="block text-sm font-medium mb-2">Senha</label>
+        <input id="senha" name="senha" type="password" class="w-full border rounded-lg p-3" placeholder="Crie uma senha" required>
+      </div>
+
+      <div class="md:col-span-2 flex flex-col sm:flex-row gap-4 mt-6">
+        <a href="index.html" class="w-full sm:w-1/2 text-center border border-violet-700 text-violet-700 py-3 rounded-lg hover:bg-violet-50 transition">
+          Voltar
+        </a>
+
+        <button type="submit" class="w-full sm:w-1/2 bg-violet-700 text-white py-3 rounded-lg hover:bg-violet-800 transition">
+          Salvar cadastro
+        </button>
+      </div>
+
+    </form>
+
+    <section class="support-panel mt-8">
+      <div class="grid gap-6 lg:grid-cols-[1.6fr_1fr] items-center">
+        <div>
+          <p class="text-xs uppercase tracking-[0.24em] text-violet-700">Suporte</p>
+          <h3 class="mt-3 text-2xl font-bold text-slate-900">Precisa de ajuda com o cadastro?</h3>
+          <p class="mt-3 text-sm text-slate-500 max-w-2xl">Envie um e-mail para nosso suporte e receba ajuda para completar seu cadastro sem erros.</p>
+        </div>
+        <a href="mailto:suporte@vyrapix.com" class="button-primary">Falar com o suporte</a>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    const cpfField = document.getElementById('cpf');
+    const cepField = document.getElementById('cep');
+
+    cpfField.addEventListener('input', function () {
+      let value = this.value.replace(/\D/g, '');
+      value = value.replace(/(\d{3})(\d)/, '$1.$2');
+      value = value.replace(/(\d{3})(\d)/, '$1.$2');
+      value = value.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+      this.value = value;
+    });
+
+    cepField.addEventListener('input', function () {
+      let value = this.value.replace(/\D/g, '');
+      value = value.replace(/(\d{5})(\d)/, '$1-$2');
+      this.value = value;
+    });
+  </script>
+</body>
+</html>

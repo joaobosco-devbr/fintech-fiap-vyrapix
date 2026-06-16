@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VyraPix - Recuperar Senha</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="bg-slate-100 min-h-screen flex items-center justify-center p-4">
+
+  <main class="bg-white shadow-lg rounded-2xl p-8 w-full max-w-md">
+
+    <header class="text-center mb-8">
+      <div class="w-14 h-14 bg-violet-700 rounded-2xl flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">
+        V
+      </div>
+
+      <h1 class="text-3xl font-bold text-violet-700">VyraPix</h1>
+      <p class="text-gray-500 mt-2">Recuperação de senha</p>
+    </header>
+
+    <section class="mb-6">
+      <h2 class="text-xl font-bold text-slate-800 mb-2">Esqueceu sua senha?</h2>
+      <p class="text-sm text-slate-500">
+        Informe seu e-mail ou CPF cadastrado para receber as instruções de recuperação da sua conta.
+      </p>
+    </section>
+
+    <form action="index.html" method="get" class="space-y-5">
+
+      <div>
+        <label for="recuperar-email" class="block text-sm font-medium mb-2">E-mail ou CPF</label>
+        <input
+          id="recuperar-email"
+          name="email"
+          type="text"
+          class="w-full border rounded-lg p-3"
+          placeholder="Digite seu e-mail ou CPF"
+          required>
+      </div>
+
+      <button
+        type="submit"
+        class="block w-full text-center bg-violet-700 text-white py-3 rounded-lg hover:bg-violet-800 transition">
+        Enviar instruções
+      </button>
+
+      <a
+        href="index.html"
+        class="block w-full text-center border border-violet-700 text-violet-700 py-3 rounded-lg hover:bg-violet-50 transition">
+        Voltar para login
+      </a>
+
+    </form>
+
+    <section class="support-panel mt-8">
+      <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <div>
+          <p class="text-xs uppercase tracking-[0.24em] text-violet-700">Suporte</p>
+          <h3 class="mt-2 text-xl font-bold text-slate-900">Precisa recuperar sua conta?</h3>
+          <p class="mt-2 text-sm text-slate-500 max-w-2xl">Nosso suporte está pronto para ajudar você com acesso e redefinição de senha.</p>
+        </div>
+        <a href="mailto:suporte@vyrapix.com" class="button-primary">Falar com o suporte</a>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VyraPix - Login</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="bg-slate-100 min-h-screen flex items-center justify-center">
+
+    <div class="bg-white shadow-lg rounded-2xl p-8 w-full max-w-md">
+
+        <div class="text-center mb-6">
+            <h1 class="text-3xl font-bold text-violet-700">VyraPix</h1>
+            <p class="text-gray-500">Acessar Conta</p>
+        </div>
+
+        <form action="dashboard.html" method="get">
+            <div class="mb-4">
+                <label for="login-email" class="block text-sm font-medium mb-2">E-mail ou CPF</label>
+                <input
+                    id="login-email"
+                    name="email"
+                    type="text"
+                    class="w-full border rounded-lg p-3"
+                    placeholder="Digite seu e-mail ou CPF"
+                    required>
+            </div>
+
+            <div class="mb-4">
+                <label for="login-password" class="block text-sm font-medium mb-2">Senha</label>
+                <input
+                    id="login-password"
+                    name="senha"
+                    type="password"
+                    class="w-full border rounded-lg p-3"
+                    placeholder="Digite sua senha"
+                    required>
+            </div>
+
+            <div class="flex justify-between text-sm mb-6">
+                <a href="recuperar.html" class="text-violet-700 hover:underline">Esqueceu sua senha?</a>
+                <a href="cadastro.html" class="text-violet-700 hover:underline">Criar conta</a>
+            </div>
+
+            <button
+                type="submit"
+                class="block w-full bg-violet-700 text-white py-3 rounded-lg hover:bg-violet-800 transition">
+                Entrar
+            </button>
+        </form>
+
+    </div>
+
+</body>
+</html>

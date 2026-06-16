@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VyraPix - Resumo Financeiro</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="bg-slate-100 min-h-screen text-slate-800">
+
+  <main class="min-h-screen flex flex-col md:flex-row">
+
+    <aside class="w-full md:w-64 bg-white shadow-lg p-5 md:min-h-screen">
+      <div class="flex items-center gap-2 mb-8">
+        <div class="w-10 h-10 bg-violet-700 rounded-xl flex items-center justify-center text-white font-bold">V</div>
+        <h1 class="text-2xl font-bold text-violet-800">VyraPix</h1>
+      </div>
+
+      <nav class="grid gap-3 text-sm">
+        <a class="menu-item" href="dashboard.html">Dashboard</a>
+        <a class="menu-item" href="extrato.html">Extrato</a>
+        <a class="menu-item active" href="resumo.html">Resumo</a>
+        <a class="menu-item" href="cadastro.html">Cadastro</a>
+        <a class="menu-item" href="index.html">Sair</a>
+      </nav>
+    </aside>
+
+    <section class="flex-1 p-5 md:p-8">
+
+      <header class="bg-white rounded-2xl shadow p-5 mb-6 flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-center">
+        <div>
+          <p class="text-sm text-slate-500">Controle mensal</p>
+          <h2 class="text-2xl md:text-3xl font-bold text-slate-900">Resumo Financeiro</h2>
+        </div>
+
+        <div class="sm:text-right">
+          <p class="text-sm text-slate-500">Economia do mês</p>
+          <p class="text-xl md:text-2xl font-bold text-violet-800">R$ 2.543,89</p>
+        </div>
+      </header>
+
+      <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+        <article class="card">
+          <p class="text-sm text-slate-500">Receitas</p>
+          <h3 class="text-2xl font-bold text-green-600 mt-1">R$ 5.500,00</h3>
+          <p class="text-xs text-slate-400 mt-2">Entradas no período</p>
+        </article>
+
+        <article class="card">
+          <p class="text-sm text-slate-500">Despesas</p>
+          <h3 class="text-2xl font-bold text-red-500 mt-1">R$ 2.956,11</h3>
+          <p class="text-xs text-slate-400 mt-2">Gastos mensais</p>
+        </article>
+
+        <article class="card">
+          <p class="text-sm text-slate-500">Investimentos</p>
+          <h3 class="text-2xl font-bold text-violet-800 mt-1">R$ 2.500,00</h3>
+          <p class="text-xs text-slate-400 mt-2">Valor aplicado</p>
+        </article>
+
+        <article class="card">
+          <p class="text-sm text-slate-500">Meta mensal</p>
+          <h3 class="text-2xl font-bold text-blue-600 mt-1">82%</h3>
+          <p class="text-xs text-slate-400 mt-2">Progresso da meta</p>
+        </article>
+      </section>
+
+      <section class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+
+        <article class="bg-white rounded-2xl shadow p-6">
+          <h3 class="text-lg font-bold text-slate-900 mb-1">Distribuição financeira</h3>
+          <p class="text-sm text-slate-500 mb-6">Comparação entre receitas, despesas e investimentos.</p>
+
+          <div class="space-y-5">
+
+            <div>
+              <div class="flex justify-between text-sm mb-2">
+                <span class="font-semibold">Receitas</span>
+                <span class="text-green-600 font-bold">100%</span>
+              </div>
+              <div class="h-3 bg-slate-100 rounded-full overflow-hidden">
+                <div class="h-full bg-green-500 rounded-full" style="width: 100%;"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-sm mb-2">
+                <span class="font-semibold">Despesas</span>
+                <span class="text-red-500 font-bold">54%</span>
+              </div>
+              <div class="h-3 bg-slate-100 rounded-full overflow-hidden">
+                <div class="h-full bg-red-500 rounded-full" style="width: 54%;"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-sm mb-2">
+                <span class="font-semibold">Investimentos</span>
+                <span class="text-violet-700 font-bold">45%</span>
+              </div>
+              <div class="h-3 bg-slate-100 rounded-full overflow-hidden">
+                <div class="h-full bg-violet-700 rounded-full" style="width: 45%;"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-sm mb-2">
+                <span class="font-semibold">Economia</span>
+                <span class="text-blue-600 font-bold">46%</span>
+              </div>
+              <div class="h-3 bg-slate-100 rounded-full overflow-hidden">
+                <div class="h-full bg-blue-500 rounded-full" style="width: 46%;"></div>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+        <article class="bg-white rounded-2xl shadow p-6">
+          <h3 class="text-lg font-bold text-slate-900 mb-1">Categorias de gastos</h3>
+          <p class="text-sm text-slate-500 mb-6">Principais áreas de consumo no mês.</p>
+
+          <div class="space-y-4">
+
+            <div class="summary negative">
+              <span>Alimentação</span>
+              <strong>R$ 780,50</strong>
+            </div>
+
+            <div class="summary negative">
+              <span>Assinaturas</span>
+              <strong>R$ 139,90</strong>
+            </div>
+
+            <div class="summary negative">
+              <span>Transporte</span>
+              <strong>R$ 420,00</strong>
+            </div>
+
+            <div class="summary negative">
+              <span>Compras online</span>
+              <strong>R$ 650,00</strong>
+            </div>
+
+            <div class="summary neutral">
+              <span>Outros</span>
+              <strong>R$ 965,71</strong>
+            </div>
+
+          </div>
+        </article>
+
+      </section>
+
+      <section class="bg-white rounded-2xl shadow p-6 mb-6">
+        <h3 class="text-lg font-bold text-slate-900 mb-1">Análise inteligente</h3>
+        <p class="text-sm text-slate-500 mb-5">Resumo automático com base nas movimentações do mês.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="border rounded-xl p-4">
+            <p class="text-sm text-slate-500">Ponto positivo</p>
+            <h4 class="font-bold text-green-600 mt-1">Boa economia mensal</h4>
+            <p class="text-sm text-slate-500 mt-2">Você manteve R$ 2.543,89 disponíveis após os gastos.</p>
+          </div>
+
+          <div class="border rounded-xl p-4">
+            <p class="text-sm text-slate-500">Atenção</p>
+            <h4 class="font-bold text-red-500 mt-1">Gastos elevados</h4>
+            <p class="text-sm text-slate-500 mt-2">As despesas representam 54% das receitas do mês.</p>
+          </div>
+
+          <div class="border rounded-xl p-4">
+            <p class="text-sm text-slate-500">Sugestão VyraPix</p>
+            <h4 class="font-bold text-violet-700 mt-1">Aumentar investimentos</h4>
+            <p class="text-sm text-slate-500 mt-2">Uma parte da economia pode ser destinada a renda fixa.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="support-panel mt-6">
+        <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p class="text-xs uppercase tracking-[0.24em] text-violet-700">Suporte</p>
+            <h3 class="mt-2 text-xl font-bold text-slate-900">Precisa de ajuda com seu resumo?</h3>
+            <p class="mt-2 text-sm text-slate-500 max-w-2xl">Fale com nossa equipe para receber orientação sobre suas finanças e metas mensais.</p>
+          </div>
+          <div class="flex flex-col gap-3 sm:flex-row">
+            <a href="mailto:suporte@vyrapix.com" class="button-primary">Falar com o suporte</a>
+            <a href="dashboard.html" class="button-secondary">Voltar ao Dashboard</a>
+          </div>
+        </div>
+      </section>
+
+    </section>
+  </main>
+
+</body>
+</html>
