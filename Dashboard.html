@@ -27,7 +27,7 @@
 
           <!-- Logo principal -->
           <div class="flex-shrink-0 xl:mb-8">
-            <a href="#" class="logo-link" aria-label="VyraPix - Página inicial">
+            <a href="#dashboard" class="logo-link" aria-label="VyraPix - Página inicial">
               <img
                 src="img/logo.jpeg"
                 alt="Logo VyraPix"
@@ -48,18 +48,18 @@
             </span>
           </div>
 
-          <!-- Navegação -->
-          <nav class="flex-1 min-w-0 flex gap-2 overflow-x-auto pb-1 xl:grid xl:gap-3 xl:flex-none xl:overflow-visible xl:pb-0 text-sm">
-            <a class="menu-item active whitespace-nowrap flex-shrink-0" aria-current="page" href="#">Dashboard</a>
-            <a class="menu-item whitespace-nowrap flex-shrink-0" href="#">Extrato</a>
-            <a class="menu-item whitespace-nowrap flex-shrink-0" href="#">Resumo</a>
-            <a class="menu-item whitespace-nowrap flex-shrink-0" href="#">Cadastro</a>
-            <a class="menu-item whitespace-nowrap flex-shrink-0" href="#">Sair</a>
+          <!-- Navegação interna da página -->
+          <nav class="flex-1 min-w-0 flex gap-2 overflow-x-auto pb-1 xl:grid xl:gap-3 xl:flex-none xl:overflow-visible xl:pb-0 text-sm" aria-label="Navegação principal">
+            <a class="menu-item active whitespace-nowrap flex-shrink-0" aria-current="page" href="#dashboard">Dashboard</a>
+            <a class="menu-item whitespace-nowrap flex-shrink-0" href="#investimentos">Investimentos</a>
+            <a class="menu-item whitespace-nowrap flex-shrink-0" href="#resumo-mes">Resumo do mês</a>
+            <a class="menu-item whitespace-nowrap flex-shrink-0" href="#extrato">Extrato recente</a>
+            <a class="menu-item whitespace-nowrap flex-shrink-0" href="#suporte">Suporte</a>
           </nav>
         </aside>
 
         <!-- Conteúdo principal -->
-        <section class="main-dashboard">
+        <section id="dashboard" class="main-dashboard">
 
           <!-- Marca d'água -->
           <img
@@ -88,24 +88,24 @@
 
             <!-- Atalhos -->
             <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4 mb-6">
-              <a href="#" class="quick-card">Pix</a>
-              <a href="#" class="quick-card">Transferir</a>
-              <a href="#" class="quick-card">Pagar</a>
-              <a href="#" class="quick-card">Cartões</a>
+              <a href="#extrato" class="quick-card">Pix</a>
+              <a href="#extrato" class="quick-card">Transferir</a>
+              <a href="#extrato" class="quick-card">Pagar</a>
+              <a href="#resumo-mes" class="quick-card">Cartões</a>
             </div>
 
             <!-- Cards principais -->
             <div class="grid gap-6 xl:grid-cols-3">
 
               <!-- Card Investimentos -->
-              <article class="card">
+              <article id="investimentos" class="card">
                 <div class="mb-4 flex items-center justify-between gap-4">
                   <div>
                     <p class="text-xs uppercase tracking-[0.24em] text-slate-500">Carteira</p>
                     <h2 class="card-title">Investimentos</h2>
                   </div>
 
-                  <a href="#" class="text-sm font-semibold text-violet-700 hover:underline">Ver resumo</a>
+                  <a href="#resumo-mes" class="text-sm font-semibold text-violet-700 hover:underline">Ver resumo</a>
                 </div>
 
                 <p class="text-3xl font-bold text-violet-800 mb-5">R$ 2.500,00</p>
@@ -129,7 +129,7 @@
               </article>
 
               <!-- Card Resumo Financeiro -->
-              <article class="card">
+              <article id="resumo-mes" class="card">
                 <div class="mb-4 flex items-center justify-between gap-4">
                   <div>
                     <p class="text-xs uppercase tracking-[0.24em] text-slate-500">Indicadores</p>
@@ -137,7 +137,7 @@
                     <p class="mt-1 font-semibold text-slate-900">Mensal</p>
                   </div>
 
-                  <a href="#" class="text-sm font-semibold text-violet-700 hover:underline">Detalhes</a>
+                  <a href="#resumo-mes" class="text-sm font-semibold text-violet-700 hover:underline">Detalhes</a>
                 </div>
 
                 <div class="space-y-4">
@@ -159,14 +159,14 @@
               </article>
 
               <!-- Card Extrato -->
-              <article class="card">
+              <article id="extrato" class="card">
                 <div class="mb-4 flex items-center justify-between gap-4">
                   <div>
                     <p class="text-xs uppercase tracking-[0.24em] text-slate-500">Transações</p>
                     <h2 class="card-title">Extrato Recente</h2>
                   </div>
 
-                  <a href="#" class="text-sm font-semibold text-violet-700 hover:underline">Ver tudo</a>
+                  <a href="#extrato" class="text-sm font-semibold text-violet-700 hover:underline">Ver tudo</a>
                 </div>
 
                 <div class="space-y-3 text-sm">
@@ -199,7 +199,7 @@
             </div>
 
             <!-- Suporte -->
-            <section class="support-panel mt-10">
+            <section id="suporte" class="support-panel mt-10">
               <div class="grid gap-6 lg:grid-cols-[1.6fr_1fr] items-center">
                 <div>
                   <p class="text-xs uppercase tracking-[0.24em] text-violet-700">Suporte VyraPix</p>
@@ -215,7 +215,7 @@
                 </div>
 
                 <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-end">
-                  <a href="#" class="button-secondary">Ver Extrato</a>
+                  <a href="#extrato" class="button-secondary">Ver Extrato</a>
                   <a href="mailto:suporte@vyrapix.com" class="button-primary">Falar com o suporte</a>
                 </div>
               </div>
