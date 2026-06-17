@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VyraPix - Extrato</title>
+  <meta name="description" content="Veja todas as suas movimentações VyraPix.">
+  <link rel="icon" href="/image/favicon.png" type="image/png">
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="./css/style.css">
@@ -11,19 +13,29 @@
 
 <body class="bg-slate-100 min-h-screen text-slate-800">
 
+  <div id="toast" class="hidden"></div>
+
   <main class="min-h-screen flex flex-col md:flex-row">
 
-    <aside class="w-full md:w-64 bg-white shadow-lg p-5 md:min-h-screen">
-      <div class="flex items-center gap-2 mb-8">
-        <div class="w-10 h-10 bg-violet-700 rounded-xl flex items-center justify-center text-white font-bold">
-          V
+    <aside class="rounded-[32px] border border-white/80 bg-white/90 p-6 shadow-[0_28px_90px_rgba(15,23,42,0.12)] backdrop-blur-sm md:w-64 md:order-1">
+      <div class="mb-8">
+        <div class="inline-flex items-center gap-3 text-xl font-bold text-violet-700">
+          <div class="h-10 w-10 rounded-2xl bg-violet-100 grid place-items-center text-violet-700">V</div>
+          VyraPix
         </div>
-        <h1 class="text-2xl font-bold text-violet-800">VyraPix</h1>
+        <p class="mt-3 text-sm text-slate-500">Gestão financeira inteligente para suas finanças.</p>
+      </div>
+
+      <div class="profile-card mb-8 rounded-[28px] bg-slate-50 p-6 shadow-sm">
+        <div class="avatar mb-4">J</div>
+        <p class="text-sm text-slate-500">Olá,</p>
+        <p class="mt-1 text-xl font-semibold text-slate-900">João Bosco</p>
+        <span class="mt-4 inline-flex rounded-full bg-violet-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-violet-700">Conta Premium</span>
       </div>
 
       <nav class="grid gap-3 text-sm">
         <a class="menu-item" href="dashboard.html">Dashboard</a>
-        <a class="menu-item active" href="extrato.html">Extrato</a>
+        <a class="menu-item active" aria-current="page" href="extrato.html">Extrato</a>
         <a class="menu-item" href="resumo.html">Resumo</a>
         <a class="menu-item" href="cadastro.html">Cadastro</a>
         <a class="menu-item" href="index.html">Sair</a>
@@ -55,22 +67,24 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
 
           <div class="w-full">
-            <label class="block text-sm font-medium mb-2">Data inicial</label>
+            <label for="data-inicial" class="block text-sm font-medium mb-2">Data inicial</label>
             <input
+              id="data-inicial"
               type="date"
-              class="w-full min-w-0 border rounded-lg p-3 bg-white text-slate-700">
+              class="w-full min-w-0 border rounded-lg p-3 bg-white text-slate-700 focus:ring-2 focus:ring-violet-400 focus:outline-none">
           </div>
 
           <div class="w-full">
-            <label class="block text-sm font-medium mb-2">Data final</label>
+            <label for="data-final" class="block text-sm font-medium mb-2">Data final</label>
             <input
+              id="data-final"
               type="date"
-              class="w-full min-w-0 border rounded-lg p-3 bg-white text-slate-700">
+              class="w-full min-w-0 border rounded-lg p-3 bg-white text-slate-700 focus:ring-2 focus:ring-violet-400 focus:outline-none">
           </div>
 
           <div class="w-full">
-            <label class="block text-sm font-medium mb-2">Tipo</label>
-            <select class="w-full min-w-0 border rounded-lg p-3 bg-white text-slate-700">
+            <label for="tipo" class="block text-sm font-medium mb-2">Tipo</label>
+            <select id="tipo" class="w-full min-w-0 border rounded-lg p-3 bg-white text-slate-700 focus:ring-2 focus:ring-violet-400 focus:outline-none">
               <option>Todos</option>
               <option>Entrada</option>
               <option>Saída</option>
@@ -257,6 +271,18 @@
 
     </section>
   </main>
+
+  <script>
+    function mostrarToast(msg, tipo) {
+      const toast = document.getElementById('toast');
+      toast.textContent = msg;
+      toast.className = 'fixed top-5 right-5 z-50 px-5 py-3 rounded-xl shadow-lg text-sm font-semibold transition-all duration-300 '
+        + (tipo === 'sucesso'
+          ? 'bg-green-100 text-green-800 border border-green-300'
+          : 'bg-red-100 text-red-800 border border-red-300');
+      setTimeout(() => { toast.className = 'hidden'; }, 3000);
+    }
+  </script>
 
 </body>
 </html>

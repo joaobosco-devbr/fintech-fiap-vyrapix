@@ -4,12 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VyraPix - Recuperar Senha</title>
+  <meta name="description" content="Recupere o acesso à sua conta VyraPix.">
+  <link rel="icon" href="/image/favicon.png" type="image/png">
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body class="bg-slate-100 min-h-screen flex items-center justify-center p-4">
+
+  <div id="toast" class="hidden"></div>
 
   <main class="bg-white shadow-lg rounded-2xl p-8 w-full max-w-md">
 
@@ -29,7 +33,7 @@
       </p>
     </section>
 
-    <form action="index.html" method="get" class="space-y-5">
+    <form action="#" method="get" class="space-y-5">
 
       <div>
         <label for="recuperar-email" class="block text-sm font-medium mb-2">E-mail ou CPF</label>
@@ -37,7 +41,7 @@
           id="recuperar-email"
           name="email"
           type="text"
-          class="w-full border rounded-lg p-3"
+          class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-violet-400 focus:outline-none"
           placeholder="Digite seu e-mail ou CPF"
           required>
       </div>
@@ -45,7 +49,7 @@
       <button
         type="submit"
         class="block w-full text-center bg-violet-700 text-white py-3 rounded-lg hover:bg-violet-800 transition">
-        Enviar instruções
+        Enviar link de recuperação
       </button>
 
       <a
@@ -68,6 +72,25 @@
     </section>
 
   </main>
+
+  <script>
+    function mostrarToast(msg, tipo) {
+      const toast = document.getElementById('toast');
+      toast.textContent = msg;
+      toast.className = 'fixed top-5 right-5 z-50 px-5 py-3 rounded-xl shadow-lg text-sm font-semibold transition-all duration-300 '
+        + (tipo === 'sucesso'
+          ? 'bg-green-100 text-green-800 border border-green-300'
+          : 'bg-red-100 text-red-800 border border-red-300');
+      setTimeout(() => { toast.className = 'hidden'; }, 3000);
+    }
+
+    document.querySelector('form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = document.getElementById('recuperar-email').value.trim();
+      if (!email) { mostrarToast('Preencha o e-mail ou CPF.', 'erro'); return; }
+      mostrarToast('Enviamos um link para seu e-mail.', 'sucesso');
+    });
+  </script>
 
 </body>
 </html>
