@@ -1,0 +1,78 @@
+/* =========================================================
+   VyraPix - Estilos personalizados do Dashboard
+   Arquivo separado para manter o HTML mais limpo e profissional.
+   ========================================================= */
+
+/* Área principal onde a marca d'água fica posicionada */
+.main-dashboard {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Conteúdo principal acima da marca d'água */
+.dashboard-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Link da logo na sidebar */
+.logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Logo principal da sidebar */
+.dashboard-logo {
+  display: block;
+  width: 185px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Marca d'água no fundo do dashboard */
+.dashboard-watermark {
+  position: absolute;
+  top: 170px;
+  left: 50%;
+  z-index: 0;
+  width: min(700px, 76%);
+  transform: translateX(-50%) rotate(-8deg);
+  opacity: 0.075;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Deixa os cards levemente translúcidos para a marca d'água aparecer de forma sutil */
+.card,
+.quick-card,
+.support-panel {
+  background-color: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(6px);
+}
+
+/* Cabeçalho principal do dashboard */
+.dashboard-header {
+  background-color: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(6px);
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 1279px) {
+  .logo-link {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-logo {
+    width: 150px;
+  }
+
+  .dashboard-watermark {
+    top: 240px;
+    width: 430px;
+    opacity: 0.045;
+  }
+}
